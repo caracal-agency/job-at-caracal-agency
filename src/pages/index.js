@@ -1,15 +1,20 @@
-import { Flex, Heading, Image } from '@chakra-ui/react';
+import { Heading, Image } from '@chakra-ui/react';
 
-const Home = () => {
-	return (
-		<Flex w="100vw" h="100vh" alignItems="center" justifyContent="center" flexDirection="column">
+import Container from '_comps/Layout/Container';
+import Col from '_comps/Layout/Col';
+
+const Home = () => (
+	<Container h="100vh" alignItems="center">
+		<Col colStart={2} colEnd={[26, null, null, 12]}>
 			<Heading as="h1" fontSize="6xl">
 				Hello world
 			</Heading>
+		</Col>
 
+		<Col colStart={[2, null, null, 13]} colEnd={26}>
 			<Image src="/logo_caracal-studio.svg" alt="Caracal Studio’s logo" maxWidth="200" my={8} />
-		</Flex>
-	);
-};
+		</Col>
+	</Container>
+);
 
 export default Home;
