@@ -1,4 +1,5 @@
 import { ChakraProvider } from '@chakra-ui/react';
+import { round } from 'lodash';
 import PropTypes from 'prop-types';
 
 import theme from '_comps/Theme';
@@ -19,3 +20,7 @@ MyApp.propTypes = {
 };
 
 export default MyApp;
+
+export function reportWebVitals(metric) {
+	process.env.NODE_ENV === 'development' && console.log(`%c▲ Dune – ${metric.name}:`, 'font-weight: bold;', `${round(metric.value, 2)}ms`);
+}

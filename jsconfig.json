@@ -1,0 +1,8 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"_comps/*": ["src/comps/*"],
+		}
+	}
+}
