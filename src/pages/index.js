@@ -1,17 +1,11 @@
-import { Heading, Image } from '@chakra-ui/react';
-
 import Col from '_comps/Layout/Col';
 import Container from '_comps/Layout/Container';
 
-export default function Home() {
+export default function Dashboard() {
 	return (
-		<Container h="100vh" alignItems="center">
-			<Col colStart={2} colEnd={26} textAlign="center">
-				<Heading as="h1" fontSize="6xl">
-					Hello world
-				</Heading>
-
-				<Image src="/logo_caracal-studio.svg" alt="Caracal Studio’s logo" maxWidth="200" my={8} d="inline" />
+		<Container>
+			<Col>
+				<div>This should contain the dashboard</div>
 			</Col>
 		</Container>
 	);
