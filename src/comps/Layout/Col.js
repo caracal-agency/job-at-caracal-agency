@@ -1,4 +1,4 @@
-import { GridItem, forwardRef } from '@chakra-ui/react';
+import { forwardRef, GridItem } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 
 const Col = forwardRef((props, ref) => (
