@@ -19,7 +19,7 @@ Given this boilerplate repository and the Figma file received on the day of the 
 
 -   The app should force authentication before accessing any of the pages.
 -   For this test, the same page should allow to create a new account.
--   The dashboard should display all entries by default and allow filtering through an optional toolbar, toggled by a button
+-   The dashboard should display all entries by default and allow filtering through an optional toolbar which can be toggled by a button.
 -   Through the dashboard, bulk deletion should be possible after confirming a dialog alert.
 -   By clicking an entry, we can review & update its information.
 -   We can add new entries manually.
