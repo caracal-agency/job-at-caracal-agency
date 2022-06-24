@@ -13,12 +13,31 @@ This repository should be used for job interviews at Caracal Studio and consists
 
 ## Brief
 
-Given this boilerplate repository and Figma files received on the day of the test, the candidate is expected to implement the UI as close as timely possible and with the UX functionalities underlined here below.
+Given this boilerplate repository and Figma files received on the day of the test, the candidate is expected to implement the UI as faithfully as possible and in a timely possible manner, considering the UX functionalities underlined in this README.
 
-We strive for pixel perfect interfaces but it is up to the candidate to determine the amount of energy that can be invested in the details.
+## Features expected
 
-## Functionalities
+-   The app should force authentication before accessing any of the pages.
+-   For this test, the same page should allow to create a new account.
+-   The dashboard should display all entries by default and allow filtering through an optional toolbar, toggled by a button
+-   Through the dashboard, bulk deletion should be possible after confirming a dialog alert.
+-   By clicking an entry, we can review & update its information.
+-   We can add new entries manually
 
--   `/src/pages/index.js` should not display any data coming from Supabase unless an authenticated session is initialized on the client’s side.
--   `/src/pages/login.js` should contain the login form.
--   `/src/pages/[id].js`
+## Noteworthy details
+
+-   Don’t forget input validation where it’s necessary; you might also want to check the columns settings in Supabase to decide accordingly.
+-   A headless `<DatePicker />` component is available in the `_comps` folder with its logic already prepared. It’s up to you to stylize it.
+-   The column `flight_cost` should only receive a number; format it through `currency.js`
+-   Possible choices for the column `status` are:
+    -   Initialized
+    -   Created
+    -   Verified
+    -   Completed
+    -   Declined
+-   Possible choices for the column `special_type` are:
+    -   stdn (standard)
+    -   acc (accessibility)
+-   Possible choices for the column `ticket_type` are:
+    -   FIX
+    -   FLEX
