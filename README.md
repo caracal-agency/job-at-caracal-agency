@@ -13,7 +13,7 @@ This repository should be used for job interviews at Caracal Studio and consists
 
 ## Brief
 
-Given this boilerplate repository and Figma files received on the day of the test, the candidate is expected to implement the UI as faithfully as possible and in a timely possible manner, considering the UX functionalities underlined in this README.
+Given this boilerplate repository and the Figma file received on the day of the test, the candidate is expected to implement the UI as faithfully as possible and in a timely possible manner, considering the UX functionalities underlined in this README.
 
 ## Features expected
 
@@ -22,13 +22,13 @@ Given this boilerplate repository and Figma files received on the day of the tes
 -   The dashboard should display all entries by default and allow filtering through an optional toolbar, toggled by a button
 -   Through the dashboard, bulk deletion should be possible after confirming a dialog alert.
 -   By clicking an entry, we can review & update its information.
--   We can add new entries manually
+-   We can add new entries manually.
 
 ## Noteworthy details
 
 -   Don’t forget input validation where it’s necessary; you might also want to check the columns settings in Supabase to decide accordingly.
--   A headless `<DatePicker />` component is available in the `_comps` folder with its logic already prepared. It’s up to you to stylize it.
--   The column `flight_cost` should only receive a number; format it through `currency.js`
+-   The column `flight_cost` should only receive a number.
+-   A headless `<DatePicker />` component is available in the `_comps` folder with its logic already prepared, it’s up to you to stylize it.
 -   Possible choices for the column `status` are:
     -   Initialized
     -   Created
