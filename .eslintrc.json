@@ -1,3 +1,15 @@
 {
-	"extends": "next/core-web-vitals"
+	"extends": ["next/core-web-vitals", "prettier"],
+	"plugins": ["simple-import-sort", "prettier", "unused-imports"],
+	"rules": {
+		"prettier/prettier": "error",
+		"simple-import-sort/imports": [
+			"error",
+			{
+				"groups": [["^\\u0000"], ["^@?\\w"], ["^_comps(/.*|$)"], ["^_supabase(/.*|$)"], ["^\\."]]
+			}
+		],
+		"unused-imports/no-unused-imports": "warn",
+		"unused-imports/no-unused-vars": "warn"
+	}
 }

@@ -35,6 +35,22 @@ const theme = extendTheme({
 	config,
 	styles: {
 		global: (props) => ({
+			':root': {
+				// ? date picker
+				'--duet-color-primary': '#005fcc',
+				'--duet-color-text': '#333',
+				'--duet-color-text': 'ctive: #fff',
+				'--duet-color-placeholder': '#666',
+				'--duet-color-button': '#f5f5f5',
+				'--duet-color-surface': '#fff',
+				'--duet-color-overlay': 'rgba(0, 0, 0, 0.8)',
+				'--duet-color-border': '#333',
+				'--duet-font': '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+				'--duet-font-normal': 400,
+				'--duet-font-bold': 600,
+				'--duet-radius': '4px',
+				'--duet-z-index': 600,
+			},
 			body: {
 				fontFamily: 'body',
 				color: mode('gray.800', 'whiteAlpha.900')(props),

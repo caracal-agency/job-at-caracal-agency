@@ -1,34 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Working at Caracal Studio
 
-## Getting Started
+(current edition: Summer 2022)
 
-First, run the development server:
+## Technical stack
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+This repository should be used for job interviews at Caracal Studio and consists on the following technical stack:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+-   Next.js as the React framework – [docs](https://nextjs.org/docs/getting-started)
+-   Chakra UI as the CSS framework – [docs](https://chakra-ui.com/)
+-   Framer Motion as the motion framework – [docs](https://framer.com/motion)
+-   Supabase as the database – [docs](https://supabase.com/docs)
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Brief
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Given this boilerplate repository and the Figma file received on the day of the test, the candidate is expected to implement the UI as faithfully as possible and in a timely possible manner, considering the UX functionalities underlined in this README.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Features expected
 
-## Learn More
+-   The app should force authentication before accessing any of the pages.
+-   For this test, the same page should allow to create a new account.
+-   The dashboard should display all entries by default and allow filtering through an optional toolbar which can be toggled by a button.
+-   Through the dashboard, bulk deletion should be possible after confirming a dialog alert.
+-   By clicking an entry, we can review & update its information.
+-   We can add new entries manually.
 
-To learn more about Next.js, take a look at the following resources:
+## Noteworthy details
 
--   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
--   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+-   Don’t forget input validation where it’s necessary; you might also want to check the columns settings in Supabase to decide accordingly.
+-   A headless `<DatePicker />` component is available in the `_comps` folder with its logic already prepared, it’s up to you to stylize it.
+-   The column `flight_cost` should only receive a number.
+-   Possible choices for the column `status` are:
+    -   Initialized
+    -   Created
+    -   Verified
+    -   Completed
+    -   Declined
+-   Possible choices for the column `special_type` are:
+    -   stdn (standard)
+    -   acc (accessibility)
+-   Possible choices for the column `ticket_type` are:
+    -   FIX
+    -   FLEX
