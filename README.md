@@ -1,4 +1,5 @@
 # Working at Caracal Studio
+
 (current edition: Summer 2022)
 
 ## Technical stack
