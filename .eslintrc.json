@@ -6,7 +6,7 @@
 		"simple-import-sort/imports": [
 			"error",
 			{
-				"groups": [["^\\u0000"], ["^@?\\w"], ["^_cms(/.*|$)"], ["^_comps(/.*|$)"], ["^_contexts(/.*|$)"], ["^_misc(/.*|$)"], ["^_skeletons(/.*|$)"], ["^ui(/.*|$)"], ["^\\."]]
+				"groups": [["^\\u0000"], ["^@?\\w"], ["^_comps(/.*|$)"], ["^_supabase(/.*|$)"], ["^\\."]]
 			}
 		],
 		"unused-imports/no-unused-imports": "warn",
