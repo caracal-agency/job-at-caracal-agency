@@ -27,8 +27,8 @@ Given this boilerplate repository and the Figma file received on the day of the 
 ## Noteworthy details
 
 -   Don’t forget input validation where it’s necessary; you might also want to check the columns settings in Supabase to decide accordingly.
--   The column `flight_cost` should only receive a number.
 -   A headless `<DatePicker />` component is available in the `_comps` folder with its logic already prepared, it’s up to you to stylize it.
+-   The column `flight_cost` should only receive a number.
 -   Possible choices for the column `status` are:
     -   Initialized
     -   Created
