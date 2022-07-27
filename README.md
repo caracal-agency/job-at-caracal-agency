@@ -8,8 +8,8 @@ This repository should be used for job interviews at Caracal Studio and consists
 
 -   Next.js as the React framework – [docs](https://nextjs.org/docs/getting-started)
 -   Chakra UI as the CSS framework – [docs](https://chakra-ui.com/)
--   Framer Motion as the motion framework – [docs](https://framer.com/motion)
 -   Supabase as the database – [docs](https://supabase.com/docs)
+-   Framer Motion as the motion framework – [docs](https://framer.com/motion)
 
 ## Brief
 
@@ -17,16 +17,15 @@ Given this boilerplate repository and the Figma file received on the day of the 
 
 ## Features expected
 
--   The app should force authentication before accessing any of the pages.
--   For this test, the same page should allow to create a new account.
--   The dashboard should display all entries by default and allow filtering through an optional toolbar which can be toggled by a button.
--   Through the dashboard, bulk deletion should be possible after confirming a dialog alert.
--   By clicking an entry, we can review & update its information.
--   We can add new entries manually.
+-   The dashboard should display entries without filters by default and allow filtering through an optional toolbar which can be toggled by a button – don’t forget the pagination!
+-   Through the dashboard, bulk deletion should be possible after confirming a [dialog alert](https://chakra-ui.com/docs/components/alert-dialog/usage).
+-   We can add new entries manually (`src/pages/new.js`).
+-   By clicking an entry, we can review & update its information (`src/pages/[id].js`).
+-   Optional: we can log in/create an account using Supabase’s Javascript API (`src/pages/login.js`).
 
 ## Noteworthy details
 
--   Don’t forget input validation where it’s necessary; you might also want to check the columns settings in Supabase to decide accordingly.
+-   Don’t forget input validation where it can be useful, you can refer to the screenshots at the end of the README to learn more about the current columns.
 -   A headless `<DatePicker />` component is available in the `_comps` folder with its logic already prepared, it’s up to you to stylize it.
 -   The column `flight_cost` should only receive a number.
 -   Possible choices for the column `status` are:
@@ -41,3 +40,13 @@ Given this boilerplate repository and the Figma file received on the day of the 
 -   Possible choices for the column `ticket_type` are:
     -   FIX
     -   FLEX
+
+## Tables structure
+
+### `registrations`:
+
+![image](https://user-images.githubusercontent.com/7307687/181276112-69d488ab-bd80-4a3a-a613-1cea01ef3bc9.png)
+
+### `countries`:
+
+![image](https://user-images.githubusercontent.com/7307687/181276578-50c119ed-1fc4-420c-9f37-39e25d5b6787.png)
