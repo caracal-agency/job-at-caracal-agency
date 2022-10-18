@@ -1,4 +1,4 @@
-# Working at Caracal Studio
+# Working at Caracal Agency
 
 (current edition: Summer 2022)
 
