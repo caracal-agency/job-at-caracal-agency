@@ -4,7 +4,7 @@
 
 ## Technical stack
 
-This repository should be used for job interviews at Caracal Studio and consists on the following technical stack:
+This repository should be used for job interviews at Caracal Agency and consists on the following technical stack:
 
 -   Next.js as the React framework – [docs](https://nextjs.org/docs/getting-started)
 -   Chakra UI as the CSS framework – [docs](https://chakra-ui.com/)
