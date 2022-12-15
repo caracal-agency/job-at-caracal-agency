@@ -1,61 +1,54 @@
-import { clsx } from 'clsx';
+import classnames from 'classnames';
 
 type ColProps = {
 	children: React.ReactNode;
-	colStart?: number | number[];
-	colEnd?: number | number[];
+	className?: string;
+	colStart?: number | (number | null)[];
+	colEnd?: number | (number | null)[];
 };
 
-const Col = ({ children, colStart, colEnd }: ColProps) => {
+const Col = ({ children, className, colStart, colEnd }: ColProps) => {
 	const defaultColStart = 2;
 	const defaultColEnd = 26;
 
-	let className = 'grid';
+	let styles = 'grid';
+
+	styles = classnames(styles, className);
 
 	if (typeof colStart === 'number') {
-		className = clsx(className, `col-start-${colStart}`);
+		styles = classnames(styles, `col-start-${colStart}`);
 	} else if (Array.isArray(colStart)) {
 		colStart.forEach((value, index) => {
 			if (value != null) {
-				className = clsx(className, `${getBreakpoint(index)}:col-start-${value}`);
+				styles = classnames(styles, `${getBreakpoint(index)}col-start-${value}`);
 			}
 		});
 	} else {
-		className = clsx(className, `col-start-${defaultColStart}`);
+		styles = classnames(styles, `col-start-${defaultColStart}`);
 	}
 
 	if (typeof colEnd === 'number') {
-		className = clsx(className, `col-end-${colEnd}`);
+		styles = classnames(styles, `col-end-${colEnd}`);
 	} else if (Array.isArray(colEnd)) {
 		colEnd.forEach((value, index) => {
 			if (value != null) {
-				className = clsx(className, `${getBreakpoint(index)}:col-end-${value}`);
+				// Skip the breaking point if the value is null
+				if (value === null) {
+					return;
+				}
+				styles = classnames(styles, `${getBreakpoint(index)}col-end-${value}`);
 			}
 		});
 	} else {
-		className = clsx(className, `col-end-${defaultColEnd}`);
+		styles = classnames(styles, `col-end-${defaultColEnd}`);
 	}
 
-	return <div className={className}>{children}</div>;
+	return <div className={styles}>{children}</div>;
 };
 
 export default Col;
 
+const breakpointPrefixes = ['', 'xs:', 'sm:', 'md:', 'lg:', 'xl:', '2xl:'];
 const getBreakpoint = (index: number) => {
-	switch (index) {
-		case 0:
-			return 'xs';
-		case 1:
-			return 'sm';
-		case 2:
-			return 'md';
-		case 3:
-			return 'lg';
-		case 4:
-			return 'xl';
-		case 5:
-			return '2xl';
-		default:
-			return '';
-	}
+	return breakpointPrefixes[index];
 };

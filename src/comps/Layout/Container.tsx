@@ -1,12 +1,14 @@
+import classnames from 'classnames';
+
 type ColProps = {
 	children: React.ReactNode;
-	rest?: any;
+	className?: string;
 };
 
-const Container = (props: ColProps) => (
-	<div className="grid w-full grid-cols-container" {...props.rest}>
-		{props.children}
-	</div>
-);
+const styles = classnames('grid', 'w-full', 'grid-cols-container');
+
+const Container = ({ children, className }: ColProps) => {
+	return <div className={classnames(styles, className)}>{children}</div>;
+};
 
 export default Container;
