@@ -48,7 +48,7 @@ const Col = ({ children, className, colStart, colEnd }: ColProps) => {
 
 export default Col;
 
-const breakpointPrefixes = ['', 'xs:', 'sm:', 'md:', 'lg:', 'xl:', '2xl:'];
+const breakpointPrefixes = ['', 'sm:', 'md:', 'lg:', 'xl:', '2xl:'];
 const getBreakpoint = (index: number) => {
 	return breakpointPrefixes[index];
 };
