@@ -16,6 +16,8 @@ const extraColumns = {
 	27: '27',
 };
 
+const { fontFamily } = require('tailwindcss/defaultTheme');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: ['./src/pages/**/*.{js,ts,jsx,tsx}', './src/comps/**/*.{js,ts,jsx,tsx}', './src/app/**/*.{js,ts,jsx,tsx}'],
@@ -27,6 +29,11 @@ module.exports = {
 	],
 	theme: {
 		extend: {
+			fontFamily: {
+				sans: ['var(--karla)', ...fontFamily.sans],
+				jetbrains: ['var(--jetbrains)', ...fontFamily.sans],
+				karla: ['var(--karla)', ...fontFamily.sans],
+			},
 			gridColumnStart: extraColumns,
 			gridColumnEnd: extraColumns,
 			gridTemplateColumns: {
